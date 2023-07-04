@@ -1,0 +1,12 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "rm main;g++ main.cpp -o main -I include -l sfml-system -l sfml-window -l sfml-graphics -l sfml-audio -l sfml-network -lsfml-window -lsfml-graphics -lsfml-network -lsfml-audio -framework Cocoa -framework IOKit -framework CoreVideo -I /usr/include/lua5.4/ -lstdc++ -rpath /Library/Frameworks -std=c++17 -llua -lm -arch arm64 -g -fdiagnostics-color=always -L/usr/local/lib;./main"
+        }
+    ]
+}
